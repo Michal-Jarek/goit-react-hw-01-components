@@ -1,5 +1,8 @@
-import { Profile } from './Profile';
+import { Profile } from './Profile/Profile';
+
 import user from '../json/user.json';
+
+
 export const App = () => {
   return (
     <div
@@ -10,6 +13,7 @@ export const App = () => {
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
+        backgroundColor: '#e6e3e3',
       }}
     >
       <Profile
