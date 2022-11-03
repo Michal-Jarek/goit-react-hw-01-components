@@ -16,7 +16,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => (
         ['k-2', 'Views', stats.views],
         ['k-3', 'Likes', stats.likes],
       ].map(([id, text, value]) => (
-        <li className={scss.item}  key={id}>
+        <li className={scss.item} key={id}>
           <span className={scss.label}>{text} </span>
           <span className={scss.quantity}>{value.toLocaleString('en-GB')}</span>
         </li>
