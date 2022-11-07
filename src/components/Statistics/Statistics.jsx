@@ -1,29 +1,31 @@
+import PropTypes from 'prop-types';
+import scss from './Statistics.module.scss';
 
+const Statistics = ({ title = null, stat }) => (
+  <section className={scss.statistics}>
+    {title && <h2 className={scss.title}>{title}</h2>}
 
-
-const Statistics = (title, stat) => (
-    <section class="statistics">
-    <h2 class="title">Upload stat</h2>
-    {stat.map( x => console.log(x))}
-    <ul class="stat-list">
-      <li class="item">
-        <span class="label"></span>
-        <span class="percentage">4%</span>
-      </li>
-      <li class="item">
-        <span class="label">.mp3</span>
-        <span class="percentage">14%</span>
-      </li>
-      <li class="item">
-        <span class="label">.pdf</span>
-        <span class="percentage">41%</span>
-      </li>
-      <li class="item">
-        <span class="label">.mp4</span>
-        <span class="percentage">12%</span>
-      </li>
+    <ul className={scss.statList}>
+      {stat.map(({ id, label, percentage }) => (
+        <li
+          className={scss.item}
+          key={id}
+          style={{
+            backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(
+              16
+            )}`,
+          }}
+        >
+          <span className={scss.label}>{label}</span>
+          <span className={scss.percentage}>{percentage}%</span>
+        </li>
+      ))}
     </ul>
   </section>
 );
 
-export {Statistics};
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stat: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+export { Statistics };
