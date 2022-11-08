@@ -3,7 +3,7 @@ import scss from './Transaction.module.scss';
 
 const TransactionHistory = ({ items }) => (
   <table className={scss.transactionHistory}>
-    <thead >
+    <thead>
       <tr className={scss.head}>
         <th className={scss.head__item}>Type</th>
         <th className={scss.head__item}>Amount</th>
@@ -26,5 +26,16 @@ const TableRow = ({ type, amount, currency }) => (
     <td className={scss.row__type}>{currency}</td>
   </tr>
 );
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    })
+  ),
+};
 
 export { TransactionHistory };
