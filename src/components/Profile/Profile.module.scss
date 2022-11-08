@@ -1,53 +1,53 @@
-.profile{
-    background-color: #fff;
-    padding-top: 1.25em;
-    border-radius: 5px;
-        overflow: hidden;
+.profile {
+  background-color: #fff;
+  padding-top: 1.25em;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 6px 6px 4px 2px rgba(0, 0, 0, 0.4);
 }
-.description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.avatar{
-    max-width: 6em;
-    background-color: rgb(126, 95, 95);
-    border-radius: 50%;
-    margin-bottom: 1em;
+.avatar {
+  max-width: 6em;
+  background-color: rgb(126, 95, 95);
+  border-radius: 50%;
+  margin-bottom: 1em;
 }
-.name{
-    font-size: 1em;
-    font-weight: 500;
-    margin-bottom: 0.3em;
+.name {
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 0.3em;
 }
-.tag{
-    font-size: 0.7em;
-    color: grey;
-    margin-bottom: 0.3em;
+.tag {
+  font-size: 0.7em;
+  color: grey;
+  margin-bottom: 0.3em;
 }
-.location{
-    composes: tag;
-    font-size: 0.8em;
+.location {
+  @extend .tag;
+  font-size: 0.8em;
 }
-.label{
-    color: grey;
-    font-size: 0.6em;
-    margin-bottom: 0.1em;
+.label {
+  color: grey;
+  font-size: 0.6em;
+  margin-bottom: 0.1em;
 }
-.quantity{
-    font-size: 0.7em;
-    font-weight: 500;
+.quantity {
+  font-size: 0.7em;
+  font-weight: 500;
 }
-.stats{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(236, 247, 245);
-    
+.stats {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(236, 247, 245);
 }
-.item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5em;
-    border: solid #e6e3e3 0.02em;
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  border: solid #e6e3e3 0.02em;
 }

@@ -1,9 +1,10 @@
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
-
+import { FriendList } from './FriendList/FriendList';
 
 import user from '../json/user.json';
 import stat from '../json/statistics.json';
+import friends from '../json/friends.json';
 
 console.log(stat);
 export const App = () => {
@@ -26,10 +27,8 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics
-        title="whatever"
-        stat={stat}
-      />
+      <Statistics title="whatever" stat={stat} />
+      <FriendList friends={friends} />
     </div>
   );
 };
